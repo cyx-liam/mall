@@ -1,23 +1,39 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
 
 Vue.use(VueRouter)
 
+const Home = () => import("../views/home/Home.vue")
+const Detail = () => import("../views/detail/Detail.vue")
+const Category = () => import("../views/category/Category.vue")
+const ShopCart = () => import("../views/shopcart/ShopCart.vue")
+const Profile = () => import("../views/profile/Profile.vue")
+
 const routes = [
   {
-    path: '/',
-    name: 'Home',
-    component: Home
+    path: "/",
+    redirect: "/home"
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
+    path: "/home",
+    component: Home,
+  },
+  {
+    path: "/category",
+    component: Category,
+  },
+  {
+    path: "/shopcart",
+    component: ShopCart,
+  },
+  {
+    path: "/profile",
+    component: Profile,
+  },
+  {
+    path: "/detail",
+    component: Detail,
+  },
 ]
 
 const router = new VueRouter({
@@ -26,4 +42,12 @@ const router = new VueRouter({
   routes
 })
 
+
+
+
+// 解决重复点击报错为题
+const originalPush = VueRouter.prototype.replace
+VueRouter.prototype.replace = function replace(location) {
+  return originalPush.call(this, location).catch(err => err)
+}
 export default router
