@@ -1,15 +1,244 @@
 <template>
-    <div>
-        <h2>类别</h2>
+    <div class="wrapper" ref="aaa">
+        <ul class="content">
+            <li>信息内容1</li>
+            <li>信息内容2</li>
+            <li>信息内容3</li>
+            <li>信息内容4</li>
+            <li>信息内容5</li>
+            <li>信息内容6</li>
+            <li>信息内容7</li>
+            <li>信息内容8</li>
+            <li>信息内容9</li>
+            <li>信息内容10</li>
+            <li>信息内容11</li>
+            <li>信息内容12</li>
+            <li>信息内容13</li>
+            <li>信息内容14</li>
+            <li>信息内容15</li>
+            <li>信息内容16</li>
+            <li>信息内容17</li>
+            <li>信息内容18</li>
+            <li>信息内容19</li>
+            <li>信息内容20</li>
+            <li>信息内容21</li>
+            <li>信息内容22</li>
+            <li>信息内容23</li>
+            <li>信息内容24</li>
+            <li>信息内容25</li>
+            <li>信息内容26</li>
+            <li>信息内容27</li>
+            <li>信息内容28</li>
+            <li>信息内容29</li>
+            <li>信息内容30</li>
+            <li>信息内容31</li>
+            <li>信息内容32</li>
+            <li>信息内容33</li>
+            <li>信息内容34</li>
+            <li>信息内容35</li>
+            <li>信息内容36</li>
+            <li>信息内容37</li>
+            <li>信息内容38</li>
+            <li>信息内容39</li>
+            <li>信息内容40</li>
+            <li>信息内容41</li>
+            <li>信息内容42</li>
+            <li>信息内容43</li>
+            <li>信息内容44</li>
+            <li>信息内容45</li>
+            <li>信息内容46</li>
+            <li>信息内容47</li>
+            <li>信息内容48</li>
+            <li>信息内容49</li>
+            <li>信息内容50</li>
+            <li>信息内容51</li>
+            <li>信息内容52</li>
+            <li>信息内容53</li>
+            <li>信息内容54</li>
+            <li>信息内容55</li>
+            <li>信息内容56</li>
+            <li>信息内容57</li>
+            <li>信息内容58</li>
+            <li>信息内容59</li>
+            <li>信息内容60</li>
+            <li>信息内容61</li>
+            <li>信息内容62</li>
+            <li>信息内容63</li>
+            <li>信息内容64</li>
+            <li>信息内容65</li>
+            <li>信息内容66</li>
+            <li>信息内容67</li>
+            <li>信息内容68</li>
+            <li>信息内容69</li>
+            <li>信息内容70</li>
+            <li>信息内容71</li>
+            <li>信息内容72</li>
+            <li>信息内容73</li>
+            <li>信息内容74</li>
+            <li>信息内容75</li>
+            <li>信息内容76</li>
+            <li>信息内容77</li>
+            <li>信息内容78</li>
+            <li>信息内容79</li>
+            <li>信息内容80</li>
+            <li>信息内容81</li>
+            <li>信息内容82</li>
+            <li>信息内容83</li>
+            <li>信息内容84</li>
+            <li>信息内容85</li>
+            <li>信息内容86</li>
+            <li>信息内容87</li>
+            <li>信息内容88</li>
+            <li>信息内容89</li>
+            <li>信息内容90</li>
+            <li>信息内容91</li>
+            <li>信息内容92</li>
+            <li>信息内容93</li>
+            <li>信息内容94</li>
+            <li>信息内容95</li>
+            <li>信息内容96</li>
+            <li>信息内容97</li>
+            <li>信息内容98</li>
+            <li>信息内容99</li>
+            <li>信息内容100</li>
+            <li>信息内容101</li>
+            <li>信息内容102</li>
+            <li>信息内容103</li>
+            <li>信息内容104</li>
+            <li>信息内容105</li>
+            <li>信息内容106</li>
+            <li>信息内容107</li>
+            <li>信息内容108</li>
+            <li>信息内容109</li>
+            <li>信息内容110</li>
+            <li>信息内容111</li>
+            <li>信息内容112</li>
+            <li>信息内容113</li>
+            <li>信息内容114</li>
+            <li>信息内容115</li>
+            <li>信息内容116</li>
+            <li>信息内容117</li>
+            <li>信息内容118</li>
+            <li>信息内容119</li>
+            <li>信息内容120</li>
+            <li>信息内容121</li>
+            <li>信息内容122</li>
+            <li>信息内容123</li>
+            <li>信息内容124</li>
+            <li>信息内容125</li>
+            <li>信息内容126</li>
+            <li>信息内容127</li>
+            <li>信息内容128</li>
+            <li>信息内容129</li>
+            <li>信息内容130</li>
+            <li>信息内容131</li>
+            <li>信息内容132</li>
+            <li>信息内容133</li>
+            <li>信息内容134</li>
+            <li>信息内容135</li>
+            <li>信息内容136</li>
+            <li>信息内容137</li>
+            <li>信息内容138</li>
+            <li>信息内容139</li>
+            <li>信息内容140</li>
+            <li>信息内容141</li>
+            <li>信息内容142</li>
+            <li>信息内容143</li>
+            <li>信息内容144</li>
+            <li>信息内容145</li>
+            <li>信息内容146</li>
+            <li>信息内容147</li>
+            <li>信息内容148</li>
+            <li>信息内容149</li>
+            <li>信息内容150</li>
+            <li>信息内容151</li>
+            <li>信息内容152</li>
+            <li>信息内容153</li>
+            <li>信息内容154</li>
+            <li>信息内容155</li>
+            <li>信息内容156</li>
+            <li>信息内容157</li>
+            <li>信息内容158</li>
+            <li>信息内容159</li>
+            <li>信息内容160</li>
+            <li>信息内容161</li>
+            <li>信息内容162</li>
+            <li>信息内容163</li>
+            <li>信息内容164</li>
+            <li>信息内容165</li>
+            <li>信息内容166</li>
+            <li>信息内容167</li>
+            <li>信息内容168</li>
+            <li>信息内容169</li>
+            <li>信息内容170</li>
+            <li>信息内容171</li>
+            <li>信息内容172</li>
+            <li>信息内容173</li>
+            <li>信息内容174</li>
+            <li>信息内容175</li>
+            <li>信息内容176</li>
+            <li>信息内容177</li>
+            <li>信息内容178</li>
+            <li>信息内容179</li>
+            <li>信息内容180</li>
+            <li>信息内容181</li>
+            <li>信息内容182</li>
+            <li>信息内容183</li>
+            <li>信息内容184</li>
+            <li>信息内容185</li>
+            <li>信息内容186</li>
+            <li>信息内容187</li>
+            <li>信息内容188</li>
+            <li>信息内容189</li>
+            <li>信息内容190</li>
+            <li>信息内容191</li>
+            <li>信息内容192</li>
+            <li>信息内容193</li>
+            <li>信息内容194</li>
+            <li>信息内容195</li>
+            <li>信息内容196</li>
+            <li>信息内容197</li>
+            <li>信息内容198</li>
+            <li>信息内容199</li>
+            <li>信息内容200</li>
+        </ul>    
     </div>
 </template>
 
 <script>
+    import BScroll from 'better-scroll';
     export default {
-        
+        data() {
+            return {
+                bscroll: null,
+            }
+        },
+        mounted () {
+            this.bscroll = new BScroll(this.$refs.aaa,{
+                probeType:3,
+                pullUpLoad: true,
+                bounce:{
+                    top:false
+                }
+            })
+
+            this.bscroll.on("scroll",(position)=>{
+                // console.log(position);
+            })
+
+            this.bscroll.on("pullingUp",()=>{
+                console.log("上拉加载");
+                this.bscroll.finishPullUp()
+            })
+        },
     }
 </script>
 
 <style scoped>
-
+    .wrapper{
+        height: 150px;
+        background-color: #999;
+        overflow: hidden;
+        /* overflow: scroll; */
+    }
 </style>

@@ -43,11 +43,10 @@ const router = new VueRouter({
 })
 
 
-
-
 // 解决重复点击报错为题
 const originalPush = VueRouter.prototype.replace
 VueRouter.prototype.replace = function replace(location) {
   return originalPush.call(this, location).catch(err => err)
 }
+
 export default router

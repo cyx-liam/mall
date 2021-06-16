@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import TabbarItem from './TabBarItem';
+import TabbarItem from './TabBarItem.vue';
     export default {
         components: {
             TabbarItem,
@@ -34,6 +34,7 @@ import TabbarItem from './TabBarItem';
 
 <style scoped>
     .tabbar{
+        width: 100%;
         display: flex;
         position: fixed;
         left: 0;
@@ -42,6 +43,7 @@ import TabbarItem from './TabBarItem';
         height: 49px;
         background-color:#f6f6f6;
         box-shadow: 0 -1px  #c9c9c9;
+        z-index: 5;
     }
     
 </style>

@@ -34,10 +34,10 @@
         flex:1;
         text-align: center;
         font-size: 14px;
+        padding: 3px 0;
     }
     .tabbar-item img{
-        margin-top: 5px;
-        height: 25px;
+        height: 24px;
         width: 25px;
     }
 </style>

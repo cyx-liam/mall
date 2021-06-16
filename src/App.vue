@@ -1,15 +1,18 @@
 <template>
   <div>
-    <router-view></router-view>
-    <tabbar></tabbar>
+    <keep-alive>
+      <router-view></router-view>
+    </keep-alive>
+    
+    <tab-bar></tab-bar>
   </div>
 </template>
 
 <script>
-import Tabbar from './components/common/tabbar/Tabbar';
+  import TabBar from './components/common/tabbar/TabBar';
   export default {
     components: {
-      Tabbar,
+      TabBar,
     },
   }
 </script>
