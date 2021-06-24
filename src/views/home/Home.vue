@@ -32,6 +32,7 @@
     import BackTop from '../../components/content/backTop/BackTop.vue';
     import {getMultiData,getHomeGoods} from '../../network/home';
     import { debounce } from '../../common/util';
+    import { backTopMixin } from '../../common/mixin';
 
     export default {
         components: {
@@ -42,8 +43,9 @@
             TabControl,
             GoodsList,
             Scroll,
-            BackTop
+            // BackTop
         },
+        mixins: [backTopMixin],
         data() {
             return {
                 banners: [],
@@ -55,10 +57,12 @@
 
                 },
                 currType:"pop",
-                isBackTop:false,
+                // isBackTop:false,
                 isTab:false,
                 scrollPosition:0,
-                goodsPosition:0
+                goodsPosition:0,
+                saveY:0,
+                itemImgListener:null,
             }
         },
         created () {
@@ -70,9 +74,19 @@
         },
         mounted () {
             const refresh = debounce(this.$refs.scroll.refresh,100)
-            this.$but.$on("imgLoad",()=>{
+            this.itemImgListener = ()=>{
                 refresh()
-            })
+            }
+            this.$but.$on("imgLoad",this.itemImgListener)
+        },
+        activated(){
+            this.$refs.scroll.refresh()
+            this.$refs.scroll.scrollTo(0,this.saveY,0)
+            
+        },
+        deactivated(){
+            this.saveY = this.$refs.scroll.scroll.y
+            this.$but.$off("imgLoad",this.itemImgListener)
         },
         methods: {
             // 数据请求方法
@@ -108,9 +122,9 @@
                 }
                 
             },
-            backTop(){
-                this.$refs.scroll.scrollTo(0,0)
-            },
+            // backTop(){
+            //     this.$refs.scroll.scrollTo(0,0)
+            // },
             contentScroll(position){
                 this.isBackTop = position.y < -800
                 this.isTab = position.y < -this.$refs.contentTab.$el.offsetTop;
