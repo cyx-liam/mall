@@ -15,23 +15,31 @@
             }
         },
         props: {
-            probeType: {
+            probeType: {    //是否派发滚动事件
                 type: Number,
                 default: 3
             },
-            click:{
+            click:{         //是否支持点击事件
                 type:Boolean,
                 default:false
             },
-            pullUpLoad:{
+            pullUpLoad:{    //是否支持上拉加载
                 type:Boolean,
                 default:false
             },
-            bounceTop:{
+            bounceTop:{     //是否支持顶部弹动
                 type:Boolean,
                 default:true
             },
-            bounceBottom:{
+            bounceBottom:{  //是否支持底部弹动
+                type:Boolean,
+                default:true
+            },
+            scrollbar:{     //是否显示滚动条
+                type:Boolean,
+                default:true
+            },
+            mouseWheel:{    //是否支持鼠标滚动滚动
                 type:Boolean,
                 default:true
             }
@@ -42,8 +50,8 @@
                 probeType:this.probeType,
                 pullUpLoad:this.pullUpLoad,
                 scrollY: true,
-                scrollbar: true,
-                mouseWheel:{},
+                scrollbar: this.scrollbar,
+                mouseWheel:this.mouseWheel,
                 bounce: {
                     top: this.bounceTop,
                     bottom:this.bounceBottom

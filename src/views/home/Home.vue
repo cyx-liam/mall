@@ -80,6 +80,7 @@
             this.$but.$on("imgLoad",this.itemImgListener)
         },
         activated(){
+            this.$but.$on("imgLoad",this.itemImgListener)
             this.$refs.scroll.refresh()
             this.$refs.scroll.scrollTo(0,this.saveY,0)
             

@@ -53,7 +53,7 @@ export default {
       commentInfo: {},
       goodsList: [],
       themeTops:[],
-      currentIndex:0
+      currentIndex:0,
     };
   },
   mixins: [backTopMixin],
@@ -140,8 +140,11 @@ export default {
       product.price = this.goods.realPrice,
       product.count = 1
 
-      this.$store.dispatch("addCart",product)
-      console.log(this.$store.state.cartList);
+      this.$store.dispatch("addCart",product).then(res=>{
+        // console.log(this.$toast);
+        this.$toast.show(res)
+      })
+      // console.log(this.$store.state.cartList);
     }
   },
   

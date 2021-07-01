@@ -8,26 +8,47 @@ export default new Vuex.Store({
     cartList:[]
   },
   mutations: {
-    addCounter(state,payload){
-      payload.count++
+    // addCounter(state,payload){
+    //   payload.count++
+    // },
+    subCount(state,payload){
+      // console.log(payload);
+      let cartItem = state.cartList.find(item => item.iid == payload)
+      cartItem.count--
+    },
+    addCount(state,payload){
+      // console.log(payload);
+      let cartItem = state.cartList.find(item => item.iid == payload)
+      cartItem.count++
     },
     addToCart(state,payload){
+      payload.checked = true
       state.cartList.push(payload)
     }
   },
   actions: {
     addCart(context,payload){
       let oldProduct = context.state.cartList.find((item)=>item.iid == payload.iid)
-      if(oldProduct){
-        context.commit("addCounter",oldProduct)
-      }else{
-        context.commit("addToCart",payload)
-      }
+      return new Promise((resolve)=>{
+        if(oldProduct){
+          // context.commit("addCounter",oldProduct)
+          resolve("已添加进购物车")
+        }else{
+          context.commit("addToCart",payload)
+          resolve("加入购物车成功")
+        }
+      })
+      
     }
   },
   modules: {
   },
   getters:{
-
+    cartLength(state){
+      return state.cartList.length
+    },
+    cartList(state){
+      return state.cartList
+    }
   }
 })
