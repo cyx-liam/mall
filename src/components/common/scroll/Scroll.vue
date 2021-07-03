@@ -21,11 +21,11 @@
             },
             click:{         //是否支持点击事件
                 type:Boolean,
-                default:false
+                default:true
             },
             pullUpLoad:{    //是否支持上拉加载
                 type:Boolean,
-                default:false
+                default:true
             },
             bounceTop:{     //是否支持顶部弹动
                 type:Boolean,
