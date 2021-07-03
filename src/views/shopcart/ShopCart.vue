@@ -26,7 +26,15 @@
         },
         activated(){
             this.$refs.scroll.refresh()
-        }
+        },
+        watch: {
+            cartLength(){
+                setTimeout(()=>{
+                    this.$refs.scroll.refresh()
+                },0)
+            }
+            
+        },
     }
 </script>
 
