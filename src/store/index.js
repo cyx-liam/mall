@@ -24,6 +24,18 @@ export default new Vuex.Store({
     addToCart(state,payload){
       payload.checked = true
       state.cartList.push(payload)
+    },
+    del(state){
+      while (state.cartList.find(item=>item.checked)) {
+        for (let i = 0; i < state.cartList.length; i++) {
+          if (state.cartList[i].checked) {
+            state.cartList.splice(i,1)
+            break;
+          }
+         
+        }
+        
+      }
     }
   },
   actions: {

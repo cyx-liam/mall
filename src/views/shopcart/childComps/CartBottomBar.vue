@@ -5,6 +5,7 @@
             <span>全选</span>
         </div>
         <div class="total-price">合计:￥{{totalPrice}}</div>
+        <div class="del" @click="del">删除</div>
         <div class="calc">去计算({{cartLength}})</div>
     </div>
 </template>
@@ -51,6 +52,9 @@
                         item.checked = true
                     })
                 )
+            },
+            del(){
+                this.$store.commit("del")
             }
         },
     }
@@ -85,6 +89,15 @@
         font-size: 18px;
         color: #666;
     }
+    .del{
+        width: 70px;
+        line-height: 44px;
+        background-color: #ffbb0d;
+        text-align: center;
+        font-weight: bold;
+        color: #fff;
+        letter-spacing: 3px;
+    }
     .calc{
         /* border:1px solid #000; */
         line-height: 44px;
@@ -92,7 +105,6 @@
         text-align: center;
         background-color: #ff4500;
         color: #fff;
-        letter-spacing: 2px;
         font-weight:bold
         
     }
