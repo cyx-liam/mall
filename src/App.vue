@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="app">
     <!-- <keep-alive exclude="betail"> -->
       <keep-alive exclude="detail">
       <router-view></router-view>

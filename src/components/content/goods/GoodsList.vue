@@ -22,7 +22,7 @@
     .good-list {
         display: flex;
         flex-flow: wrap;
-        justify-content: space-around;
+        justify-content: space-evenly;
     }
     .good-list .item{
         width: 48%;
