@@ -132,19 +132,24 @@ export default {
       }
     },
     addToCart(){
-      let product = {}
-      product.iid = this.iid,
-      product.img = this.topImages[0],
-      product.title = this.goods.title,
-      product.desc = this.goods.desc,
-      product.price = this.goods.realPrice,
-      product.count = 1
+      if(this.topImages.length && this.goods){
+        let product = {}
+        product.iid = this.iid,
+        product.img = this.topImages[0],
+        product.title = this.goods.title,
+        product.desc = this.goods.desc,
+        product.price = this.goods.realPrice,
+        product.count = 1
 
-      this.$store.dispatch("addCart",product).then(res=>{
-        // console.log(this.$toast);
-        this.$toast.show(res)
-      })
-      // console.log(this.$store.state.cartList);
+        this.$store.dispatch("addCart",product).then(res=>{
+          // console.log(this.$toast);
+          this.$toast.show(res)
+        })
+        // console.log(this.$store.state.cartList);
+      }else{
+        this.$toast.show("添加购物车失败")
+      }
+      
     }
   },
   

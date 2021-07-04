@@ -93,6 +93,7 @@ export default {
   padding: 5px 10px;
   position: relative;
   overflow: hidden;
+  flex: 1;
 }
 
 .item-info .item-desc {
