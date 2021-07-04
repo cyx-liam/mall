@@ -106,6 +106,11 @@ export default {
           this.categoryData[index].goods = res
         }
        this.titleIndex = index
+
+       setTimeout(()=>{
+        this.$refs.scroll.refresh()
+         this.$refs.scroll.scrollTo(0,this.categoryData[this.titleIndex].scrollY,0)
+       },0)
        
         // console.log(this.titles[index].goods);
         // if (this.titleIndex == -1) {
@@ -133,14 +138,6 @@ export default {
       this.isBackTop = position.y < -800
     }
     
-  },
-  mounted () {
-    this.$but.$on("imgLoad",()=>{
-      //   setTimeout(()=>{
-        this.$refs.scroll.refresh()
-         this.$refs.scroll.scrollTo(0,this.categoryData[this.titleIndex].scrollY,0)
-      //  },0)
-    })
   },
   activated(){
     this.$refs.scroll.refresh()
